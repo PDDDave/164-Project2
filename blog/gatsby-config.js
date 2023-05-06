@@ -9,10 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Dex-Blog`,
+    description: `Pokemon style Pokedex blog`,
+    author: `David Charles`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    contact: {
+      name: `David Charles`,
+      company: `MKE-Dex club`,
+      address: `Prof. Dogwood's Lab`
+    }
   },
   plugins: [
     `gatsby-plugin-image`,
