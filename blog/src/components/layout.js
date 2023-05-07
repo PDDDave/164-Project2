@@ -8,8 +8,9 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from `styled-components`
+import styled, { ThemeProvider } from "styled-components"
 
+import { Dex } from "./themes/Dex"
 import Header from "./header"
 import "./layout.css"
 
@@ -23,7 +24,7 @@ const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
   query SiteTitleQuery {
     site{
-      siteMetaData{
+      siteMetadata{
         title
       }
     }
@@ -31,7 +32,7 @@ const Layout = ({ children }) => {
   `)
 
   return(
-      <>
+  <ThemeProvider theme={Dex}>
     <Header siteTitle ={data.site.siteMetadata.title || `Title`} />
     <Content>
       <main>{children}</main>
@@ -41,12 +42,12 @@ const Layout = ({ children }) => {
           fontSize: `var(--font-sm)`,
         }}
         >
-          {new Date().getFullYear{}} &middot; Built with
+          {new Date().getFullYear()} &middot; Built with
           {` `}
           <a href="https://gatsbyjs.com">Gatsby</a>
         </footer>
     </Content>
-  </>
+  </ThemeProvider>
   )
   }
 

@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import styled from `styled-components`
+import styled from "styled-components"
 
 const Outer = styled.header`
-  background: rebeccapurple;
+  background: ${props => props.theme.header.backgroundColor};
   margin-bottom: 1.45rem;
   margin: 0 auto;
   padding: var(--space-4) var(--size-gutter);
