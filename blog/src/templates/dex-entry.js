@@ -2,13 +2,15 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { GatsbyImage } from "gatsby-plugin-image"
+import { H1 } from '../components/Heading'
+
 
 const DexEntry = ({ data }) => {
     const { pokemonName, monsterNumber, monsterBio, heroImage, region, type } = data.contentfulDexEntry;
 
     return (
         <Layout>
-            <h1>{pokemonName}</h1>
+            <H1>{pokemonName}</H1>
             <p><b>Type:</b> {type}</p>
             <p><b>Native region:</b> {region}</p>
             <div>
