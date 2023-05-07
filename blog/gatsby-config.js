@@ -1,12 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
-
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
     title: `Dex-Blog`,
@@ -27,6 +18,13 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options:{
+        spaceId: `ou07aeffz9ib`,
+        accessToken: `yyqCUnWDgC9tB8RjmjfNula0x8VRkVCM0Ib0HERJdT0`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
