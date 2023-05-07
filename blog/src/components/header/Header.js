@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { H1 } from '../Heading'
 
 const Outer = styled.header`
   background: ${props => props.theme.header.backgroundColor};
@@ -13,15 +14,11 @@ const Outer = styled.header`
   justify-content: space-between;
 `
 
-const H1 = styled.h1`
-  margin: 0px;
-`
-
 const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
   &:hover {
-    color: lightgray;
+    color: black;
 }
 `
 
