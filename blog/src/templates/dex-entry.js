@@ -11,13 +11,13 @@ const DexEntry = ({ data }) => {
     return (
         <Layout>
             <H1>{pokemonName}</H1>
-            <p><b>Type:</b> {type}</p>
-            <p><b>Native region:</b> {region}</p>
             <div>
                 <GatsbyImage
                     image ={heroImage.gatsbyImageData} 
                 />
             </div>
+            <p><b>Type:</b> {type}</p>
+            <p><b>Native region:</b> {region}</p>
             <div dangerouslySetInnerHTML={{__html: monsterBio.childMarkdownRemark.html}}></div>
         </Layout>
     );
