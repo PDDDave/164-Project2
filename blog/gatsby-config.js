@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
   siteMetadata: {
     title: `Dex-Blog`,
@@ -22,12 +26,13 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options:{
-        spaceId: `ou07aeffz9ib`,
-        accessToken: `yyqCUnWDgC9tB8RjmjfNula0x8VRkVCM0Ib0HERJdT0`
+        spaceId: `${process.env.SPACE_ID}`,
+        accessToken: `${process.env.ACCESS_TOKEN}`
       }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
