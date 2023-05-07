@@ -4,11 +4,13 @@ import Layout from "../components/layout";
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const DexEntry = ({ data }) => {
-    const { pokemonName, monsterNumber, monsterBio, heroImage } = data.contentfulDexEntry;
+    const { pokemonName, monsterNumber, monsterBio, heroImage, region, type } = data.contentfulDexEntry;
 
     return (
         <Layout>
             <h1>{pokemonName}</h1>
+            <p><b>Type:</b> {type}</p>
+            <p><b>Native region:</b> {region}</p>
             <div>
                 <GatsbyImage
                     image ={heroImage.gatsbyImageData} 
@@ -26,6 +28,8 @@ export const pageQuery = graphql`
         contentfulDexEntry(slug: {eq: $slug}) {
             pokemonName
             monsterNumber
+            region
+            type
             slug
         monsterBio{
           childMarkdownRemark {
