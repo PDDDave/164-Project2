@@ -11,6 +11,7 @@ const DexEntry = ({ data }) => {
     return (
         <Layout>
             <H1>{pokemonName}</H1>
+            <h3> #{monsterNumber} </h3>
             <div>
                 <GatsbyImage
                     image ={heroImage.gatsbyImageData} 
