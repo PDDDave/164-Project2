@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
       {
         data.allContentfulDexEntry.edges.map(edge => (
           <li key={edge.node.id}>
-            <Link to={edge.node.slug}>{edge.node.pokemonName}</Link>
+            <Link to={edge.node.slug}>#{edge.node.monsterNumber} - {edge.node.pokemonName}</Link>
           </li>
         ))
 
@@ -31,6 +31,7 @@ export const query = graphql `
         edges{
           node{
             id
+            monsterNumber
             pokemonName
             slug
           }
