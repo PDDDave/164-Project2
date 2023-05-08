@@ -1,5 +1,5 @@
 import React from 'react'
-import mainHeaderImage from './images/react.png'
+import mainHeaderImage from './images/pokeball2.png'
 import { Search } from 'styled-icons/feather'
 
 const images = {
